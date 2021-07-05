@@ -1,0 +1,30 @@
+%sm-rounded{
+    @include border-radius(5px);
+}
+%lg-rounded{
+    @include border-radius(10px);
+}
+%rounded{
+    @include border-radius(50px);
+}
+%circle{
+    @include border-radius(100%);
+}
+%fade{
+    @include transition(0.5s all ease);
+    &:hover{
+        @include transition(0.5s all ease);
+    }
+}
+%fit{
+    @include image-fit(center);
+}
+%none-text-decoration{
+    a{
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

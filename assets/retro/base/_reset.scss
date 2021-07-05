@@ -1,0 +1,242 @@
+// Import Base
+@import 'typography';
+@import 'looping';
+
+// Base Element
+body{
+    font-family: 'sans-reguler', sans-serif;
+    color: color('gray');
+    font-size: $base-font-size;
+    letter-spacing: 0.03em;
+    line-height: 1.7em;
+}
+
+a{
+    text-decoration:none;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+img{
+    max-width: 100%;
+}
+
+section{
+    padding: 80px 0;
+}
+
+hr{
+    border-color: transparentize($color: color('gray'), $amount: .6);
+    // Margin
+    &.md{
+        margin: 30px 0;
+    }
+    &.lg{
+        margin: 40px 0;
+    }
+
+    &.xl{
+        margin: 50px 0;
+    }
+    // Weight
+    &.bold{
+        border-width: 2px;
+    }
+}
+
+.container{
+    max-width: 1200px;
+    @media screen and(max-width: $br-xxl) {
+        max-width: 92%;
+    }
+}
+
+.divider{
+    height: 30px;
+    &__xs{
+        height: 10px;
+    }
+    &__sm{
+        height: 20px;
+    }
+    &__md{
+        height: 40px;
+    }
+    &__lg{
+        height: 60px;
+    }
+    &__xlg{
+        height: 80px;
+    }
+    &__xxlg{
+        height: 100px;
+    }
+}
+
+// Gutter Size
+.gutter {
+    &__sm{
+        &.row {
+            margin-right: -10px;
+            margin-left: -10px;
+            @media screen and(max-width: $br-xs) {
+            }
+        }
+        > {
+            [class^=col-],
+            [class^=" col-"] {
+                padding-right: 10px;
+                padding-left: 10px;
+                @media screen and(max-width: $br-xs) {
+                }
+            }
+        }
+    }
+    &__xs{
+        &.row {
+            margin-right: -5px;
+            margin-left: -5px;
+            @media screen and(max-width: $br-xs) {
+            }
+        }
+        > {
+            [class^=col-],
+            [class^=" col-"] {
+                padding-right: 5px;
+                padding-left: 5px;
+                @media screen and(max-width: $br-xs) {
+                }
+            }
+        }
+    }
+}
+
+.soft{
+    opacity: .6;
+    &__md{
+        opacity: .8;
+    }
+}
+
+.modal{
+    &-content{
+        border: 0;
+        padding: 40px;
+        @include border-radius(10px);
+    }
+}
+
+// Tooltips
+.tooltip {
+    @include border-radius(10px);
+    >.tooltip-inner {
+        padding: 8px 15px;
+        font-weight: 500;
+        font-family: 'Lato';
+        color:color('gray');
+        letter-spacing: 0.01em;
+        font-size: $base-font-size - 3;
+        background-color: color('gray') !important;
+    }
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+	border-bottom-color: color('gray') !important;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+	border-top-color: color('gray') !important;
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow::before,
+.bs-tooltip-left .arrow::before {
+	border-left-color: color('gray') !important;
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+	border-right-color: color('gray') !important;
+}
+
+.shadow{
+    &__bottom{
+        @include box-shadow(inset 0 -20px 80px -20px transparentize($color: color('gray'), $amount: .9));
+    }
+    &__top{
+        @include box-shadow(inset 0 -5px 80px -5px transparentize($color: color('gray'), $amount: .9));
+    }
+    &__ad-yellow{
+        box-shadow: 0 .5rem 1rem rgba(255, 192, 42, 0.21) !important;
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+// ul
+.ul__list--inline{
+  list-style:none;
+  padding:0;
+  margin:0;
+
+  >li{
+    display:inline-block;
+}
+}
+
+.ul__list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+// image
+
+.img__circle{
+    vertical-align:middle;
+    border-radius:50%;
+    object-fit:cover;
+    overflow:hidden;
+}
+
+.img__middle{
+    vertical-align:middle;
+}
+.no--hover{
+    &-opacity{
+        opacity:1 !important;
+    }
+}
+
+.overflow__h{
+    overflow:hidden;
+}
+
+.overflow__h--x{
+    overflow-x:hidden;
+}
+
+.no__outline{
+    outline-style: none !important;
+}
+
+.modal{
+    background-color:rgba(255, 255, 255, 0.8) !important;
+}
+
+.margin__minus{
+    margin:-10px 0;
+}
+
+.width__full{
+    width:100%;
+}
+
+.index-1{
+    z-index:1;
+}

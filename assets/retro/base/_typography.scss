@@ -1,0 +1,123 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
+
+// Fonts
+@font-face {
+  font-family: sans-bold;
+  src: url('../fonts/SourceSansPro-Bold.ttf');
+}
+
+@font-face {
+  font-family: sans-reguler;
+  src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: sans-semibold;
+  src: url('../fonts/SourceSansPro-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: sans-black;
+  src: url('../fonts/SourceSansPro-Black.ttf');
+}
+
+h1{
+    font-size: 70px;
+}
+
+h2{
+    font-size: 50px;
+    @media screen and(max-width: $br-md){
+        font-size: 35px;
+    }
+}
+
+h3{
+    font-size: 40px;
+    @media screen and(max-width: $br-md){
+        font-size: 25px;
+    }
+}
+
+h4{
+    font-size: 30px;
+    @media screen and(max-width: $br-md){
+        font-size: 20px;
+    }
+}
+
+h5{
+    font-size: 24px;
+    @media screen and(max-width: $br-md){
+        font-size: 18px;
+    }
+}
+
+h6{
+    font-size: 18px;
+    @media screen and(max-width: $br-md){
+        font-size: 14px;
+    }
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: 900;
+}
+
+.semibold{
+    font-weight: 700 !important;
+}
+.bold{
+    font-weight: 900 !important;
+}
+
+.normal{
+    font-weight:normal !important;
+}
+
+
+.title{
+    margin-bottom: 50px;
+    @media screen and(max-width: $br-sm){
+        margin-bottom: 30px;
+    }
+    &--md{
+        margin-bottom: 80px;
+        @media screen and(max-width: $br-sm){
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.sans-bold{
+    font-family:'sans-bold', sans-serif;
+}
+
+.sans-reguler{
+    font-family:'sans-reguler', sans-serif;
+}
+
+.sans-semibold{
+    font-family:'sans-semibold', sans-serif;
+}
+
+.sans-black{
+    font-family:'sans-black', sans-serif;
+}
+
+.uppercase__font{
+    text-transform: uppercase;
+}
+.capitalize__font{
+    text-transform: capitalize;
+}
+
+.justify{
+    text-align:justify;
+}
+
+.underline{
+    text-decoration: underline;
+}

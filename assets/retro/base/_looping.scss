@@ -1,0 +1,207 @@
+// Background color class
+@each $name, $value in $colors {
+	.bg__#{$name} {
+		background-color: $value !important;
+	}
+}
+
+// border radius
+@for $i from 1 through 50 {
+	.border__radius--#{$i}{
+		border-radius: 0px + $i !important;
+	}
+
+}
+
+// opacity
+@for $i from 1 through 10 {
+	.opacity__#{$i}{
+		opacity: $i/10;
+		transition: .5s;
+
+		&.hover{
+			&:hover{
+				opacity:1;
+			}
+		}
+	}
+}
+
+// image size
+@each $name, $size in $images-size {
+	.image__#{$name} {
+		width: $size;
+		height: $size;
+
+		&-w{
+			width: $size;
+		}
+	}
+}
+
+// border color
+@each $name, $value in $colors {
+	@for $i from 1 through 20 {
+		.border__color__#{$name} {
+			&--#{$i}{
+				border: ($i + 0px) solid $value;
+			}
+
+			&--top{
+				&--#{$i}{
+					border-top: ($i + 0px) solid $value;
+				}
+			}
+
+			&--bottom{
+				&--#{$i}{
+					border-bottom: ($i + 0px) solid $value;
+				}
+			}
+
+			&--left{
+				&--#{$i}{
+					border-left: ($i + 0px) solid $value;
+				}
+			}
+
+			&--right{
+				&--#{$i}{
+					border-right: ($i + 0px) solid $value;
+				}
+			}
+
+		}	
+	}
+}
+
+
+// shadow color
+@each $name, $value in $colors {
+	.shadow__#{$name} {
+		box-shadow:none !important;
+
+		&:hover{
+			@include box-shadow(0 15px 30px transparentize(color($name), .5));
+		}    
+	}	
+}
+
+// Color class
+@each $name, $value in $colors {
+	.color__#{$name} {
+		color: $value !important;
+	}
+}
+
+// Font Weight class
+$fw-slug: fw !default;
+@for $i from 1 to 9 {
+	.#{$fw-slug}__#{$i} {
+		font-weight: $i * 100 !important;
+	}
+}
+
+// Line height
+$class-slug: lh !default;
+@for $i from 1 to 10 {
+	.#{$class-slug}__#{$i} {
+		line-height: $i * 0.1 + 1 !important;
+	}
+}
+
+// Letter Spacing
+$spacing-slug: ls !default;
+@for $i from 1 to 10 {
+	.#{$spacing-slug}__#{$i} {
+		letter-spacing: $i * 0.1 + 0.1em !important;
+	}
+}
+
+// text size
+@for $i from 1 through 50 {
+	.font__size--#{$i} {
+		font-size:0px + $i !important;
+	}
+}
+
+// button size
+@for $i from 0 through 60 {
+	
+	.btn{
+		&__#{$i}{
+			padding :$i + 0px !important;
+		}
+	}
+
+	@for $k from 0 through 50 {
+		.btn{
+			&__#{$i}--#{$k}{
+				padding: ($i + 0px) ($k + 0px) !important; 
+			}
+		}
+	}
+}
+
+// margin minus
+
+@for $i from 1 through 20 {
+
+	.mb__minus--#{$i} {
+		margin-bottom: (-1px * $i) !important;
+	}
+
+	.mt__minus--#{$i} {
+		margin-top: (-1px * $i) !important;
+	}
+
+	.mr__minus--#{$i} {
+		margin-right: (-1px * $i) !important;
+	}
+
+	.ml__minus--#{$i} {
+		margin-left: (-1px * $i) !important;
+	}
+}
+
+// margin normal
+
+@for $i from 6 through 40 {
+
+	.mb__#{$i} {
+		margin-bottom: (0.5rem * $i) !important;
+	}
+
+	.mt__#{$i} {
+		margin-top: (0.5rem * $i) !important;
+	}
+
+	.mr__#{$i} {
+		margin-right: (0.5rem * $i) !important;
+	}
+
+	.ml__#{$i} {
+		margin-left: (0.5rem * $i) !important;
+	}
+}
+
+// padding normal
+
+@for $i from 6 through 40 {
+
+	.pb__#{$i} {
+		padding-bottom: (0.5rem * $i) !important;
+	}
+
+	.pt__#{$i} {
+		padding-top: (0.5rem * $i) !important;
+	}
+
+	.pr__#{$i} {
+		padding-right: (0.5rem * $i) !important;
+	}
+
+	.pl__#{$i} {
+		padding-left: (0.5rem * $i) !important;
+	}
+}
